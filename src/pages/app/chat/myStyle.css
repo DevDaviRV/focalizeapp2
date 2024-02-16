@@ -1,0 +1,11 @@
+.cs-message--outgoing .cs-message__content {
+  background-color: #7934ff; /* Roxo */
+}
+
+.cs-message--incoming .cs-message__content {
+  background-color: #bbaaff; /* Roxo claro */
+}
+
+.cs-message--input .cs-message__content {
+  background-color: #bbaaff; /* Roxo claro */
+}
