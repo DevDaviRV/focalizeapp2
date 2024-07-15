@@ -24,7 +24,7 @@ export function TaskCard({
   const userEmail = user.email;
 
   return (
-    <div className="h-screen max-h-[70vh] overflow-y-auto">
+    <div className="h-screen max-h-[70vh] overflow-y-auto shadow-md">
       {tasks && tasks.length > 0 ? (
         tasks.map((task) => (
           <div
@@ -55,6 +55,7 @@ export function TaskCard({
             </div>
             <div style={{ color: "#9333ea" }}>
               <DeleteTask
+
                 taskId={task.id}
                 userEmail={userEmail as string}
                 fetchTasks={reloadTasks}

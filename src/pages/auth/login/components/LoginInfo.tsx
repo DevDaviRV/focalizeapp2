@@ -3,7 +3,7 @@ import { Logo } from "@/common/Logo";
 
 export function LoginInfo () {
   return (
-    <div className="w-1/2 bg-muted rounded-xl p-6">
+    <div className="md:w-1/2 w-full bg-muted rounded-xl p-6 h-full order-2 md:order-none">
       <Logo />
       <h2 className="mt-8 text-3xl leading-[50px] font-medium">
         Vença o que te venceu até hoje. Focalize sua vida.

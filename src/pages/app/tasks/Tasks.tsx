@@ -80,20 +80,20 @@ export function Tasks() {
 
   return (
     <div
-      className="h-screen overflow-hidden bg-[#181818] text-white"
+      className="h-screen overflow-hidden bg-gradient-to-r from-zinc-900 to-gray-800 text-white"
       style={{ fontFamily: "Sora, sans-serif" }}
     >
       <div className="h-fit">
-        <header className="text-left mx-2 my-2">
-          Olá, {user?.displayName}
+        <header className="text-left p-4">
+          Olá, <span className="font-semibold">{user?.displayName}</span>
+          <p className="py-2 text-gray-400">Crie suas tarefas e acompanhe seu progresso.</p>
         </header>
-        <div className="flex flex-col items-center justify-center space-y-4 mt-6">
-          <h1 className="text-[30px] text-center font-medium"></h1>
+        <div className="w-full flex justify-between items-center px-2">
+          <div className="flex items-start justify-left gap-6 my-4 mx-2">
+            <WeekFilter />
+            <StateFilter />
+          </div>
           <ButtonForAddTask tasks={tasks} setTasks={setTasks} />
-        </div>
-        <div className="flex items-start justify-left gap-6 my-4 mx-2">
-          <WeekFilter />
-          <StateFilter />
         </div>
       </div>
       <Separator className="bg-gray-700" />

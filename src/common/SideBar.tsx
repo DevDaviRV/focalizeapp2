@@ -47,31 +47,31 @@ export function SideBar({ className }: SideBarProps) {
   };
 
   return (
-    <nav className={` ${className} `}>
+    <nav className={` ${className} flex flex-col w-fit justify-center`}>
       <div
         style={{
-          backgroundColor: "rgb(41,41,41)",
+          
           borderColor: "rgb(41,41,41)",
         }}
-        className="flex flex-col border-r-[1px] text-white h-full space-y-4"
+        className="flex flex-col border-r-[1px] bg-gradient-to-l from-zinc-900 to-zinc-800 text-white h-full px-4 space-y-4"
       >
-        <div className="p-5">
+        <div className="p-4">
           <Logo size="sm" />
         </div>
-        <div className="flex gap-3 p-5">
+        <div className="flex gap-3 p-4">
           <AddUserImage
             userProps={userProps}
             open={open}
             onOpenChange={setOpen}
           />
-          <div className="flex items-start text-left justify-center gap-4">
+          <div className="flex gap-4">
             <div className="flex flex-col">
               <p className="font-medium">{userProps.displayName}</p>
               <p className="text-sm">Premium account</p>
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-start justify-center gap-6">
+        <div className="flex flex-col gap-2 w-full px-2">
           <StartAppInfo
             displayName={
               userProps?.displayName ? userProps?.displayName : "carregando..."
@@ -84,25 +84,27 @@ export function SideBar({ className }: SideBarProps) {
             email={userProps?.email ? userProps?.email : "carregando..."}
           />
 
-          <div className="flex flex-col items-start justify-center gap-4">
+          
+        </div>
+
+        <div className="flex flex-col w-fit justify-center gap-2">
             <p className="mx-2 px-2">
               {level} ({updatedXpCatch.toFixed(1)}%/100%)
             </p>
             <Progress
               onChange={handleXpChange}
               value={updatedXpCatch}
-              className="w-[15vw] mx-4 mt-2 h-2"
+              className="w-full mx-4 mt-2 h-2"
             />
           </div>
-        </div>
 
-        <div>
+        <div className="flex flex-col gap-2">
           <h2 className="font-medium text-lg px-5 mb-2">Projetos</h2>
           <div
             key="/tasks"
             role="button"
             className={`px-5 py-1.5 flex items-center gap-3 ${
-              selectedItem === "/tasks" ? "bg-gray-700" : ""
+              selectedItem === "/tasks" ? "bg-gray-700 rounded-md" : ""
             }`}
             onClick={() => {
               navigate("/tasks");
@@ -125,7 +127,7 @@ export function SideBar({ className }: SideBarProps) {
             key="/chats"
             role="button"
             className={`px-5 py-1.5 flex items-center gap-3 ${
-              selectedItem === "/chats" ? "bg-gray-700" : ""
+              selectedItem === "/chats" ? "bg-gray-700 rounded-md" : ""
             }`}
             onClick={() => {
               navigate("/chats");
@@ -149,7 +151,7 @@ export function SideBar({ className }: SideBarProps) {
             key="/timer"
             role="button"
             className={`px-5 py-1.5 flex items-center gap-3 ${
-              selectedItem === "/timer" ? "bg-gray-700" : ""
+              selectedItem === "/timer" ? "bg-gray-700 rounded-md" : ""
             }`}
             onClick={() => {
               navigate("/timer");
@@ -170,9 +172,16 @@ export function SideBar({ className }: SideBarProps) {
           </div>
         </div>
 
-        <div className=" flex flex-col items-start justify-center gap-2">
+        
+      </div>
+      <div
+      style={{
+        
+        borderColor: "rgb(41,41,41)",
+      }}
+       className=" flex flex-col border-r-[1px]  bg-gradient-to-l from-zinc-900 to-zinc-800 items-start justify-center gap-2 text-white px-4">
           <Link to="https://focalizeapp.com.br/suporte" target="_blank">
-            <Button variant="ghost" className="opacity-50 py-2.5">
+            <Button variant="ghost" className="opacity-50 py-2.5 w-full">
               <InfoCircledIcon className="w-4 h-4 mr-2" />
               Contatar Suporte
             </Button>
@@ -186,9 +195,8 @@ export function SideBar({ className }: SideBarProps) {
             <ExitIcon className="w-4 h-4 mr-2" />
             Sair da conta
           </Button>
-          <div className="py-3"></div>
+          
         </div>
-      </div>
     </nav>
   );
 }

@@ -25,8 +25,8 @@ export function DeleteTask({ taskId, userEmail, fetchTasks }: DelteTaskProps){
     return (
         <Dialog>
             <DialogTrigger>
-                <Button className="bg-black hover:bg-black w-fit h-fit rounded-full">
-                    <Trash size={12} />
+                <Button className="bg-white hover:bg-gray-100 w-fit h-fit rounded-full">
+                    <Trash className="text-purple-600" size={12} />
                 </Button>
             </DialogTrigger>
             <DialogContent>

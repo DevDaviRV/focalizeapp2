@@ -75,7 +75,7 @@ export function ButtonForAddTask({ tasks, setTasks }: ButtonForAddTaskProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-purple-600">Adicionar tarefa</Button>
+        <Button className="bg-purple-600 hover:bg-purple-700">Adicionar tarefa</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <form onSubmit={handleFormSubmit}>

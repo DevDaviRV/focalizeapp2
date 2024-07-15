@@ -41,7 +41,6 @@ export function StartAppInfo({ displayName }: StartAppInfoProps) {
             onClick={() => setOpenModal(false)}
             className="absolute top-3 right-3"
           >
-            <X size={24} color="#fff" />
           </button>
         </DialogHeader>
         <div className="flex flex-col items-center justify-center gap-6">

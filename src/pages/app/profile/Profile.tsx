@@ -26,11 +26,11 @@ export function Profile({ displayName, email }: ProfileProps) {
           className="bg-[#151519] hover:bg-[#151519]"
           onClick={() => setOpenModal(true)}
         >
-          <div className="flex items-center justify-center gap-4 ">
+          <div className="flex items-center justify-center gap-4 w-auto">
             <UserIcon />
-            <div className="flex flex-col">
-              <h1 className="text-white text-sm font-bold">Meu perfil</h1>
-            </div>
+
+            <h1 className="text-white text-sm font-bold">Meu perfil</h1>
+
           </div>
         </Button>
       </DialogTrigger>

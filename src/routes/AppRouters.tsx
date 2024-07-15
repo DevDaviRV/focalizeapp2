@@ -11,7 +11,7 @@ export function AppRouters() {
 
     <div className={`flex h-screen overflow-hidden`}>
       <SideBar className="w-1/5" />
-    <div className="w-4/5 ">
+    <div className="w-4/5 h-full">
       <Routes>
         <Route path="/chats" element={<Chat />} />
         <Route path="/tasks" element={<Tasks />} />
